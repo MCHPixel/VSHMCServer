@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="maven-model-builder-3.9.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/org/apache/maven/maven-model-builder/3.9.6/maven-model-builder-3.9.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

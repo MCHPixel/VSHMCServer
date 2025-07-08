@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="adventure-api-4.17.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/libraries/net/kyori/adventure-api/4.17.0/adventure-api-4.17.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

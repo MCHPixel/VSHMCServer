@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Impulse">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/proxy/data/plugins/bStats/Impulse.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

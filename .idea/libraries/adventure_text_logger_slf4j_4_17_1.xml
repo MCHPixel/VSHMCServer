@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="adventure-text-logger-slf4j-4.17.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/net/kyori/adventure-text-logger-slf4j/4.17.0/adventure-text-logger-slf4j-4.17.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

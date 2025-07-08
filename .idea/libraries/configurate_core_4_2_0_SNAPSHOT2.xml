@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="configurate-core-4.2.0-SNAPSHOT2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/libraries/org/spongepowered/configurate-core/4.2.0-SNAPSHOT/configurate-core-4.2.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

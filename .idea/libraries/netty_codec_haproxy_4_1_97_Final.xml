@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="netty-codec-haproxy-4.1.97.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/io/netty/netty-codec-haproxy/4.1.97.Final/netty-codec-haproxy-4.1.97.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

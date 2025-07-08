@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="log4j-iostreams-2.22.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/org/apache/logging/log4j/log4j-iostreams/2.22.1/log4j-iostreams-2.22.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name=".paper-remapped">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/.paper-remapped/TAB.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/.paper-remapped/Vault.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

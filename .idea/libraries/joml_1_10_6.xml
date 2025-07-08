@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="joml-1.10.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/libraries/org/joml/joml/1.10.5/joml-1.10.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

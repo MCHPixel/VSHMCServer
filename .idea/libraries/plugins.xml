@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/EssentialsXChat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/TAB.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms-Bukkit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/EssentialsXSpawn.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/EssentialsXDiscord.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/EssentialsX.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/Vault.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/ViaVersion.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

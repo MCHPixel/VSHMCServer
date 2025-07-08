@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="guava-32.1.2-jre2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/com/google/guava/guava/32.1.2-jre/guava-32.1.2-jre.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

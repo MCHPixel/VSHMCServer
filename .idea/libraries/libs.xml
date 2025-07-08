@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/h2-driver-2.1.214.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/asm-9.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/bytebuddy-1.15.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-platform-bukkit-4.21.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-platform-4.21.1-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/bytebuddy-1.15.11-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/caffeine-3.2.0-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-platform-4.21.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/commodore-file-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/asm-commons-9.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/caffeine-3.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/event-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/okio-1.17.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/event-3.0.0-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/commodore-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-4.21.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/okhttp-3.14.9-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/commodore-2.2-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-4.21.1-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/okio-1.17.6-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/jar-relocator-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/adventure-platform-bukkit-4.21.1-remapped.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/okhttp-3.14.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/plugins/LuckPerms/libs/commodore-file-1.0-remapped.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="spark-paper-1.10.119-SNAPSHOT2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/me/lucko/spark-paper/1.10.119-SNAPSHOT/spark-paper-1.10.119-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

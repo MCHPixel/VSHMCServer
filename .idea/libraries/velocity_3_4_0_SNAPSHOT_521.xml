@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="velocity-3.4.0-SNAPSHOT-521">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/proxy/data/velocity-3.4.0-SNAPSHOT-521.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

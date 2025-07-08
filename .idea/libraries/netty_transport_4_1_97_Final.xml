@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="netty-transport-4.1.97.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-hub/data/libraries/io/netty/netty-transport/4.1.97.Final/netty-transport-4.1.97.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

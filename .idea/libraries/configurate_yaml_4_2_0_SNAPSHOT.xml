@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="configurate-yaml-4.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/org/spongepowered/configurate-yaml/4.2.0-SNAPSHOT/configurate-yaml-4.2.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

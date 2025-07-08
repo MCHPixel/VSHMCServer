@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="protobuf-java-3.25.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/servers/paper-smp/data/libraries/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
