@@ -1,0 +1,66 @@
+services:
+  proxy:
+    image: itzg/bungeecord
+    container_name: velocity
+    environment:
+      TYPE: VELOCITY
+      VERSION: latest
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      JVM_OPTS: "-Xmx1G"
+    volumes:
+      - ./proxy/data:/server
+      - ./servers/paper-hub/data/forwarding.secret:/server/forwarding.secret
+    ports:
+      - "25565:25565"
+    networks:
+      - mc-network
+    restart: unless-stopped
+
+  paper-hub:
+    image: itzg/minecraft-server
+    container_name: hub
+    environment:
+      TYPE: PAPER
+      VERSION: 1.21.1
+      ONLINE_MODE: "FALSE"
+      EULA: "TRUE"
+      JVM_OPTS: "-Xmx5G"
+      SERVER_PORT: "25001"
+      RCON_PORT: "25051"
+    ports:
+      - "25001:25001"
+      - "25051:25051"
+    volumes:
+      - ./servers/paper-hub/data:/data
+    depends_on:
+      - proxy
+    networks:
+      - mc-network
+    restart: unless-stopped
+  
+  paper-smp:
+    image: itzg/minecraft-server
+    container_name: smp
+    environment:
+      TYPE: PAPER
+      VERSION: 1.21.1
+      ONLINE_MODE: "FALSE"
+      EULA: "TRUE"
+      JVM_OPTS: "-Xmx5G"
+      SERVER_PORT: "25002"
+      RCON_PORT: "25062"
+    ports:
+      - "25002:25002"
+      - "25062:25062"
+    volumes:
+      - ./servers/paper-smp/data:/data
+    depends_on:
+      - proxy
+    networks:
+      - mc-network
+    restart: unless-stopped
+
+networks:
+  mc-network:
+    driver: bridge

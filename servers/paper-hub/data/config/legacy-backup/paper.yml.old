@@ -1,0 +1,6 @@
+settings:
+  bungeecord: true
+  velocity-support:
+    enabled: true
+    online-mode: false
+    secret: forwarding.secret

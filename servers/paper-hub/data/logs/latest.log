@@ -1,0 +1,7 @@
+[15:53:43] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.7+6-LTS; Eclipse Adoptium Temurin-21.0.7+6) on Linux 6.10.14-linuxkit (amd64)
+[15:53:43] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-133-ver/1.21.1@3cb8529 (2025-03-28T16:14:36Z) for Minecraft 1.21.1
+[15:53:46] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[15:53:56] [ServerMain/INFO]: [PluginInitializerManager] Initialized 8 plugins
+[15:53:56] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (8):
+ - Essentials (2.21.1), EssentialsChat (2.21.1), EssentialsDiscord (2.21.1), EssentialsSpawn (2.21.1), LuckPerms (5.5.9), TAB (5.2.4), Vault (1.7.3-b131), ViaVersion (5.4.0)
+[15:54:58] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]

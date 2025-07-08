@@ -1,0 +1,16 @@
+instanceName: network
+    servers:
+      - name: paper
+        inactiveTimeout: 300
+        type: docker
+        docker:
+          image: itzg/minecraft-server
+          env:
+            TYPE: PAPER
+            VERSION: 1.21.1
+            ONLINE_MODE: "FALSE"
+            EULA: "TRUE"
+          portBindings:
+            - "25566:25565"
+          volumes:
+            - "/srv/paper2:/data"

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 172.67.221.49
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1751979631681
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1751981768451
+  login: 1751989388093
+money: '0'
+last-account-name: ImHackerGod
+lastlocation:
+  world: 788021c3-92a0-4711-861c-506684b7f6e6
+  world-name: world
+  x: -23.959843160760467
+  y: 69.0
+  z: 7.888698755038028
+  yaw: 93.5999755859375
+  pitch: 24.899995803833008
+logoutlocation:
+  world: 788021c3-92a0-4711-861c-506684b7f6e6
+  world-name: world
+  x: -17.51505119229019
+  y: 72.40270044406601
+  z: 26.426070599432816
+  yaw: 121.64994049072266
+  pitch: -17.099998474121094
