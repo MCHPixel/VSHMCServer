@@ -84,3 +84,5 @@
 [10:31:37] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36306 is pinging the server with version Unknown
 [10:32:08] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37580 is pinging the server with version Unknown
 [10:32:39] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:60378 is pinging the server with version Unknown
+[10:33:07] [Shutdown thread/INFO] [com.velocitypowered.proxy.VelocityServer]: Shutting down the proxy...
+[10:33:07] [Shutdown thread/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Closing endpoint /0.0.0.0:25565

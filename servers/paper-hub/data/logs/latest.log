@@ -170,3 +170,42 @@ No token provided! Please follow the tutorial in the config in order to setup th
 [10:28:37] [Async Chat Thread - #4/INFO]: [Not Secure] [Admin] ImHackerGod >> llo
 [10:28:53] [Server thread/INFO]: ImHackerGod lost connection: Disconnected
 [10:28:53] [Server thread/INFO]: ImHackerGod left the game
+[10:33:04] [RCON Listener #1/INFO]: Thread RCON Client /0:0:0:0:0:0:0:1 started
+[10:33:04] [Server thread/INFO]: [Rcon: Stopping the server]
+[10:33:04] [Server thread/INFO]: Stopping server
+[10:33:04] [RCON Client /0:0:0:0:0:0:0:1 #2/INFO]: Thread RCON Client /0:0:0:0:0:0:0:1 shutting down
+[10:33:04] [Server thread/INFO]: [EssentialsDiscord] Disabling EssentialsDiscord v2.21.1
+[10:33:04] [Server thread/INFO]: [EssentialsSpawn] Disabling EssentialsSpawn v2.21.1
+[10:33:04] [Server thread/INFO]: [TAB] Disabling TAB v5.2.4
+[10:33:04] [Server thread/INFO]: [TAB] Disabled in 1ms
+[10:33:04] [Server thread/INFO]: [EssentialsChat] Disabling EssentialsChat v2.21.1
+[10:33:04] [Server thread/INFO]: [Essentials] Disabling Essentials v2.21.1
+[10:33:04] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[10:33:04] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[10:33:04] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.5.9
+[10:33:04] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[10:33:04] [Server thread/INFO]: [LuckPerms] Closing storage...
+[10:33:04] [Server thread/INFO]: [LuckPerms] Goodbye!
+[10:33:04] [Server thread/INFO]: [ViaVersion] Disabling ViaVersion v5.4.0
+[10:33:04] [Server thread/INFO]: [ViaVersion] ViaVersion has been disabled; uninjected the platform and shut down the scheduler.
+[10:33:04] [Server thread/INFO]: Saving players
+[10:33:04] [Server thread/INFO]: Saving worlds
+[10:33:04] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 110 entity chunks, 0 poi chunks in world 'world' in 0.11s
+[10:33:04] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 1 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
+[10:33:04] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[10:33:04] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.02s
+[10:33:04] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:33:04] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:33:04] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:33:04] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
