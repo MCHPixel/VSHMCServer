@@ -79,3 +79,7 @@
 [10:29:05] [Netty epoll Worker #19/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:39198 is pinging the server with version Unknown
 [10:29:35] [Netty epoll Worker #20/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55262 is pinging the server with version Unknown
 [10:30:06] [Netty epoll Worker #21/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55820 is pinging the server with version Unknown
+[10:30:36] [Netty epoll Worker #22/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:38100 is pinging the server with version Unknown
+[10:31:07] [Netty epoll Worker #23/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:46284 is pinging the server with version Unknown
+[10:31:37] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36306 is pinging the server with version Unknown
+[10:32:08] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37580 is pinging the server with version Unknown
