@@ -1,7 +1,10 @@
-#Owner:
-#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
-#  tagprefix: "&2&lOwner &a"
-Player:
+Owner:
+  tabprefix: "&7[&4&lOwner&7] &7"
+  tagprefix: "&4&lOwner&7 &7"
+Admin:
+  tabprefix: "&7[&4&lAdmin&7] &7"
+  tagprefix: "&4&lAdmin&7 &7"
+Default:
   tabprefix: "&0&l[&7&lPlayer&0&l] &3"
   tagprefix: "&2&lPlayer &3"
 example_group:
