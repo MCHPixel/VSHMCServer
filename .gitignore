@@ -1,0 +1,8 @@
+# Ignore logs directory in paper-hub
+servers/paper-hub/data/logs/
+
+# Ignore logs directory in paper-smp
+servers/paper-smp/data/logs/
+
+# Ignore logs directory in proxy
+proxy/data/logs
