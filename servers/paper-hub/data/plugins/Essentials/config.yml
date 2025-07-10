@@ -146,7 +146,7 @@ item-spawn-blacklist:
 permission-based-item-spawn: false
 
 # The maximum number of entities that can be spawned per use of the /spawnmob command.
-spawnmob-limit: 10
+spawnmob-limit: 500
 
 # Should Essentials notify smitten players when /lightning is used?
 warn-on-smite: true
@@ -557,8 +557,8 @@ allow-silent-join-quit: false
 # {ONLINE} - The number of players online.
 # {UNIQUE} - The number of unique players to join the server.
 # {UPTIME} - The amount of time the server has been online.
-custom-join-message: "{PREFIX}{PLAYER} >> Joined the game"
-custom-quit-message: "none"
+custom-join-message: "{PREFIX} {USERNAME}&7 >> [Joined the game!]"
+custom-quit-message: "{PREFIX} {USERNAME}&7 >> [Left the game!]"
 
 # You can set a custom join message for players who join with an updated username here.
 # This message will only be used if a player has joined before and has since changed their username.
@@ -574,7 +574,7 @@ custom-quit-message: "none"
 # {ONLINE} - The number of players online.
 # {UNIQUE} - The number of unique players to join the server.
 # {UPTIME} - The amount of time the server has been online.
-custom-new-username-message: "none"
+custom-new-username-message: "{PREFIX} {USERNAME}&7 Changed thier Name!"
 
 # Should Essentials override the vanilla "Server Full" message with its own from the language file?
 # Set to false to keep the vanilla message.
@@ -824,7 +824,7 @@ command-costs:
 # Set this to a currency symbol you want to use.
 # Remember, if you want to use special characters in this document, such as accented letters,
 # you MUST save the file as UTF-8, not ANSI.
-currency-symbol: '$'
+currency-symbol: '€'
 
 # Enable this to make the currency symbol appear at the end of the amount rather than at the start.
 # For example, the euro symbol typically appears after the current amount.
@@ -832,12 +832,12 @@ currency-symbol-suffix: false
 
 # Set the maximum amount of money a player can have.
 # Note: Extremely large numbers may have unintended consequences.
-max-money: 10000000000000
+max-money: 100000000000000
 
 # Set the minimum amount of money a player can have (must be greater than the negative value of max-money).
 # Setting this to 0 will disable overdrafts/loans completely.
 # Players need 'essentials.eco.loan' permission to have a negative balance.
-min-money: -10000
+min-money: 0
 
 # Enable this to log all interactions with buy/sell/trade signs and the sell command.
 economy-log-enabled: false
@@ -847,7 +847,7 @@ economy-log-enabled: false
 economy-log-update-enabled: false
 
 # The minimum acceptable amount to be used in /pay.
-minimum-pay-amount: 0.001
+minimum-pay-amount: 1
 
 # Enable this to block players who try to /pay someone who is ignoring them.
 pay-excludes-ignore-list: false
@@ -1204,7 +1204,7 @@ newbies:
   # {DISPLAYNAME} will be replaced with the player name.
   # Set to '' to disable.
   #announce-format: ''
-  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
+  announce-format: '{PREFIX} {USERNAME}&7 to the server!'
 
   # When players spawn for the first time, which spawnpoint should be used?
   # Set to 'none' to use the spawnpoint of the world.
@@ -1215,7 +1215,7 @@ newbies:
   # This kit will be given regardless of cost and permissions and won't trigger any kit delay (cooldown).
   # Set to '' to disable.
   #kit: ''
-  kit: tools
+  kit: ''
 
 # What priority should Essentials use for handling respawns?
 # Set this to 'none' if you want vanilla respawning behavior.
