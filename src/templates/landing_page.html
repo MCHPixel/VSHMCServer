@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ t["title"] }}</title>
+    <link stylesheet="/static/landing_page.css">
+</head>
+<body>
+<form method="get">
+    <label for="lang">Choose language:</label>
+    <select name="lang" id="lang" onchange="this.form.submit()">
+        <option value="en" {% if current_lang == 'en' %}selected{% endif %}>English</option>
+        <option value="es" {% if current_lang == 'es' %}selected{% endif %}>Español</option>
+        <option value="fr" {% if current_lang == 'fr' %}selected{% endif %}>Français</option>
+    </select>
+</form>
+<div class="main-content">
+    <h1>Hellof</h1>
+</div>
+
+<h1>{{ t["heading"] }}</h1>
+<p>{{ t["paragraph"] }}</p>
+</body>
+</html>
