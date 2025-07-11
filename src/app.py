@@ -1,21 +1,18 @@
-from flask import Flask, render_template, request
-import json
-import os
+from flask import Flask, render_template, request, redirect, session, url_for
+from translations.strings import translations
 
 app = Flask(__name__)
+app.secret_key = '68034459u'  # Replace with a strong secret key in production
 
-def load_translation(lang_code):
-    filepath = os.path.join('translations', f'{lang_code}.json')
-    if not os.path.exists(filepath):
-        filepath = os.path.join('translations', 'en.json')  # fallback
-    with open(filepath, 'r', encoding='utf-8') as file:
-        return json.load(file)
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        session['lang'] = request.form.get('lang', 'en')
+        return redirect(url_for('index'))
 
-@app.route('/')
-def landing_page():
-    lang = request.args.get('lang', 'en')
-    translations = load_translation(lang)
-    return render_template('landing_page.html', t=translations, current_lang=lang)
+    lang = session.get('lang', 'en')
+    texts = translations.get(lang, translations['en'])
+    return render_template('landing_page.html', texts=texts, lang=lang)
 
 if __name__ == '__main__':
     app.run(debug=True)
