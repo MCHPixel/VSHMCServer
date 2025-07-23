@@ -3,58 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Landing Page</title>
+    <title>VSHDocker</title>
+    <link rel="icon" href="/static/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pcss.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(55, 65, 81, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
-            transform: translateY(-2px);
-        }
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 overflow-x-hidden">
+<body class="bg-midnightCoal text-gray-100 overflow-x-hidden">
+
 <!-- Fixed Header -->
 <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        
         <div class="flex items-center space-x-4">
-            <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-sm">T</span>
-            </div>
-            <h1 class="text-xl font-bold gradient-text" data-translate="header.title">TranslateApp</h1>
+            <img src="/static/favicon.png" class="h-10 rounded-lg">
+            <h1 class="text-xl font-bold gradient-text" data-translate="header.title">VSHDocker</h1>
         </div>
-
-        <!-- Language Dropdown -->
+        
         <div class="relative">
             <form method="post" class="relative">
-                <select name="lang" id="languageSelect"
+                <select id="languageSelect"
                         class="bg-gray-800 text-gray-100 px-4 py-2 rounded-lg border border-gray-600 focus:border-purple-500 focus:outline-none transition-colors"
-                        onchange="this.form.submit()">
-                    <option value="en" {% if lang == 'en' %}selected{% endif %}>🇺🇸 English</option>
-                    <option value="es" {% if lang == 'es' %}selected{% endif %}>🇪🇸 Español</option>
-                    <option value="fr" {% if lang == 'fr' %}selected{% endif %}>🇫🇷 Français</option>
-                    <option value="de" {% if lang == 'de' %}selected{% endif %}>🇩🇪 Deutsch</option>
-                    <option value="it" {% if lang == 'it' %}selected{% endif %}>🇮🇹 Italiano</option>
-                    <option value="pt" {% if lang == 'pt' %}selected{% endif %}>🇵🇹 Português</option>
+                        onchange="changeLanguage(this.value)">
+                    <option value="en">🇺🇸 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
                 </select>
             </form>
-
         </div>
     </div>
 </header>
@@ -64,19 +39,18 @@
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-16 text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text" data-translate="hero.title">
-                Break Language Barriers
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" data-translate="hero.subtitle">
-                Translate text instantly across 100+ languages with AI-powered precision
-            </p>
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text p-2" data-translate="hero.title"></h2>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" data-translate="hero.subtitle"></p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-lg font-semibold text-white hover-glow transition-all duration-300" data-translate="hero.cta_primary">
-                    Start Translating
-                </button>
-                <button class="border border-gray-600 px-8 py-4 rounded-lg font-semibold text-gray-300 hover:bg-gray-800 hover:border-gray-500 transition-all duration-300" data-translate="hero.cta_secondary">
-                    Learn More
-                </button>
+
+                <a class="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 rounded-lg font-semibold text-white hover-glow-button transition-all duration-300 flex items-center gap-2" href="{{ '/dashboard' if logged_in else '/login' }}">
+                    <span data-translate="hero.cta_primary"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right">
+                        <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </a>
+
+                <button class="border border-gray-600 px-8 py-4 rounded-lg font-semibold text-gray-300 hover:bg-gray-800 hover:border-gray-500 transition-all duration-300" data-translate="hero.cta_secondary"></button>
             </div>
         </div>
     </section>
@@ -84,113 +58,39 @@
     <!-- Features Section -->
     <section class="container mx-auto px-6 py-16">
         <div class="text-center mb-16">
-            <h3 class="text-3xl md:text-4xl font-bold mb-4 gradient-text" data-translate="features.title">
-                Why Choose Our Platform?
-            </h3>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-translate="features.subtitle">
-                Experience translation like never before with our cutting-edge technology
-            </p>
+            <h3 class="text-3xl md:text-4xl font-bold mb-4 gradient-text" data-translate="features.title"></h3>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-translate="features.subtitle"></p>
         </div>
-
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow">
+            <div class="bg-deepNautilus p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow-card">
                 <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                 </div>
-                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature1.title">Lightning Fast</h4>
-                <p class="text-gray-400" data-translate="features.feature1.description">
-                    Get instant translations in milliseconds with our optimized AI engine
-                </p>
+                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature1.title"></h4>
+                <p class="text-gray-400" data-translate="features.feature1.description"></p>
             </div>
-
             <!-- Feature 2 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow">
+            <div class="bg-deepNautilus p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow-card">
                 <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature2.title">99% Accuracy</h4>
-                <p class="text-gray-400" data-translate="features.feature2.description">
-                    Advanced neural networks ensure contextually accurate translations
-                </p>
+                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature2.title"></h4>
+                <p class="text-gray-400" data-translate="features.feature2.description"></p>
             </div>
-
             <!-- Feature 3 -->
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow">
+            <div class="bg-deepNautilus p-8 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover-glow-card">
                 <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-6">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature3.title">100+ Languages</h4>
-                <p class="text-gray-400" data-translate="features.feature3.description">
-                    Support for all major languages and dialects worldwide
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="container mx-auto px-6 py-16">
-        <div class="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-12 border border-purple-500/20">
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="text-4xl font-bold gradient-text mb-2">10M+</div>
-                    <div class="text-gray-400" data-translate="stats.translations">Translations Processed</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold gradient-text mb-2">150+</div>
-                    <div class="text-gray-400" data-translate="stats.countries">Countries Served</div>
-                </div>
-                <div>
-                    <div class="text-4xl font-bold gradient-text mb-2">99.9%</div>
-                    <div class="text-gray-400" data-translate="stats.uptime">Service Uptime</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="container mx-auto px-6 py-16">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl md:text-4xl font-bold mb-4 gradient-text" data-translate="testimonials.title">
-                What Our Users Say
-            </h3>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                        M
-                    </div>
-                    <div class="ml-4">
-                        <div class="font-semibold">Maria Rodriguez</div>
-                        <div class="text-sm text-gray-400">Business Owner</div>
-                    </div>
-                </div>
-                <p class="text-gray-300" data-translate="testimonials.testimonial1">
-                    "This translation tool has revolutionized how we communicate with our international clients. The accuracy is incredible!"
-                </p>
-            </div>
-
-            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold">
-                        J
-                    </div>
-                    <div class="ml-4">
-                        <div class="font-semibold">John Chen</div>
-                        <div class="text-sm text-gray-400">Developer</div>
-                    </div>
-                </div>
-                <p class="text-gray-300" data-translate="testimonials.testimonial2">
-                    "The API integration was seamless, and the translation quality exceeds all our expectations. Highly recommended!"
-                </p>
+                <h4 class="text-xl font-semibold mb-4" data-translate="features.feature3.title"></h4>
+                <p class="text-gray-400" data-translate="features.feature3.description"></p>
             </div>
         </div>
     </section>
@@ -201,46 +101,197 @@
     <div class="container mx-auto px-6 py-12">
         <div class="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.product">Product</h4>
+                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.product"></h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.features">Features</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.pricing">Pricing</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.api">API</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.features"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.pricing"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.api"></a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.company">Company</h4>
+                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.company"></h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.about">About</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.careers">Careers</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.contact">Contact</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.about"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.careers"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.contact"></a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.resources">Resources</h4>
+                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.resources"></h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.blog">Blog</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.documentation">Documentation</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.support">Support</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.blog"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.documentation"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.support"></a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.legal">Legal</h4>
+                <h4 class="font-semibold mb-4 gradient-text" data-translate="footer.legal"></h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.privacy">Privacy</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.terms">Terms</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.cookies">Cookies</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.privacy"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.terms"></a></li>
+                    <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.cookies"></a></li>
                 </ul>
             </div>
         </div>
 
         <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-700">
             <div class="text-gray-400 mb-4 md:mb-0">
-                <span data-translate="footer.copyright">© 2025 TranslateApp. All rights reserved.</span>
+                <span data-translate="footer.copyright"></span>
             </div>
-            <button class="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-3 rounded-lg font-semibold text-white hover-glow transition-all duration-300" data-translate="footer.get_started">
-                Get Started
-            </button>
         </div>
     </div>
 </footer>
+
+<!-- Translation Script -->
+<script>
+    const translations = {
+      en: {
+        "header.title": "VSHDocker",
+        "hero.title": "Make local server hosting easy!",
+        "hero.subtitle": "Choose from over 10 different Gameservers to run locally!",
+        "hero.cta_primary": "Start Hosting",
+        "hero.cta_secondary": "Learn More",
+        "features.title": "Why Choose Our Platform?",
+        "features.subtitle": "Experience local hosting like never before with our fully automatic Service",
+        "features.feature1.title": "Lightning Fast",
+        "features.feature1.description": "Deploy game servers instantly with Docker.",
+        "features.feature2.title": "Easy Setup",
+        "features.feature2.description": "Launch any supported game server with minimal effort.",
+        "features.feature3.title": "Cross‑Platform",
+        "features.feature3.description": "Works on Windows, Linux, and macOS seamlessly.",
+        "footer.product": "Product",
+        "footer.features": "Features",
+        "footer.pricing": "Pricing",
+        "footer.api": "API",
+        "footer.company": "Company",
+        "footer.about": "About",
+        "footer.careers": "Careers",
+        "footer.contact": "Contact",
+        "footer.resources": "Resources",
+        "footer.blog": "Blog",
+        "footer.documentation": "Docs",
+        "footer.support": "Support",
+        "footer.legal": "Legal",
+        "footer.privacy": "Privacy",
+        "footer.terms": "Terms",
+        "footer.cookies": "Cookies",
+        "hero.cta_primary": "Get Started",
+        "footer.copyright": "© 2025 VSHDocker. All rights reserved."
+      },
+      es: {
+        "header.title": "VSHDocker",
+        "hero.title": "¡Haz que el alojamiento local sea fácil!",
+        "hero.subtitle": "¡Elige entre más de 10 servidores de juegos para ejecutar localmente!",
+        "hero.cta_primary": "Comenzar",
+        "hero.cta_secondary": "Aprende más",
+        "features.title": "¿Por qué elegir nuestra plataforma?",
+        "features.subtitle": "Experimenta el alojamiento local como nunca antes con nuestro servicio automático.",
+        "features.feature1.title": "Rápido como un rayo",
+        "features.feature1.description": "Implementa servidores de juegos al instante con Docker.",
+        "features.feature2.title": "Fácil configuración",
+        "features.feature2.description": "Lanza cualquier servidor compatible con poco esfuerzo.",
+        "features.feature3.title": "Multiplataforma",
+        "features.feature3.description": "Funciona en Windows, Linux y macOS sin problemas.",
+        "footer.product": "Producto",
+        "footer.features": "Características",
+        "footer.pricing": "Precios",
+        "footer.api": "API",
+        "footer.company": "Empresa",
+        "footer.about": "Acerca de",
+        "footer.careers": "Carreras",
+        "footer.contact": "Contacto",
+        "footer.resources": "Recursos",
+        "footer.blog": "Blog",
+        "footer.documentation": "Documentación",
+        "footer.support": "Soporte",
+        "footer.legal": "Legal",
+        "footer.privacy": "Privacidad",
+        "footer.terms": "Términos",
+        "footer.cookies": "Cookies",
+        "hero.cta_primary": "Comenzar",
+        "footer.copyright": "© 2025 VSHDocker. Todos los derechos reservados."
+      },
+      fr: {
+        "header.title": "VSHDocker",
+        "hero.title": "Hébergez votre serveur local facilement !",
+        "hero.subtitle": "Choisissez parmi plus de 10 serveurs de jeu à exécuter localement !",
+        "hero.cta_primary": "Démarrer",
+        "hero.cta_secondary": "En savoir plus",
+        "features.title": "Pourquoi choisir notre plateforme ?",
+        "features.subtitle": "Découvrez l’hébergement local comme jamais auparavant avec notre service automatique.",
+        "features.feature1.title": "Ultra rapide",
+        "features.feature1.description": "Déployez des serveurs de jeu instantanément avec Docker.",
+        "features.feature2.title": "Configuration facile",
+        "features.feature2.description": "Lancez n’importe quel serveur de jeu pris en charge en un rien de temps.",
+        "features.feature3.title": "Multi-plateforme",
+        "features.feature3.description": "Fonctionne sur Windows, Linux et macOS sans accroc.",
+        "footer.product": "Produit",
+        "footer.features": "Fonctionnalités",
+        "footer.pricing": "Tarification",
+        "footer.api": "API",
+        "footer.company": "Entreprise",
+        "footer.about": "À propos",
+        "footer.careers": "Carrières",
+        "footer.contact": "Contact",
+        "footer.resources": "Ressources",
+        "footer.blog": "Blog",
+        "footer.documentation": "Documentation",
+        "footer.support": "Assistance",
+        "footer.legal": "Légal",
+        "footer.privacy": "Confidentialité",
+        "footer.terms": "Conditions",
+        "footer.cookies": "Cookies",
+        "hero.cta_primary": "Démarrer",
+        "footer.copyright": "© 2025 VSHDocker. Tous droits réservés."
+      },
+      de: {
+        "header.title": "VSHDocker",
+        "hero.title": "Mache das lokale Server‑Hosting einfach!",
+        "hero.subtitle": "Wähle aus über 10 Gameservern zur lokalen Ausführung!",
+        "hero.cta_primary": "Loslegen",
+        "hero.cta_secondary": "Mehr erfahren",
+        "features.title": "Warum unsere Plattform?",
+        "features.subtitle": "Erlebe lokales Hosting wie nie zuvor mit unserem automatischen Service.",
+        "features.feature1.title": "Blitzschnell",
+        "features.feature1.description": "Stelle Game‑Server sofort mit Docker bereit.",
+        "features.feature2.title": "Einfache Einrichtung",
+        "features.feature2.description": "Starte jeden unterstützten Gameserver mit minimalem Aufwand.",
+        "features.feature3.title": "Plattformübergreifend",
+        "features.feature3.description": "Funktioniert nahtlos auf Windows, Linux und macOS.",
+        "footer.product": "Produkt",
+        "footer.features": "Funktionen",
+        "footer.pricing": "Preise",
+        "footer.api": "API",
+        "footer.company": "Unternehmen",
+        "footer.about": "Über uns",
+        "footer.careers": "Karriere",
+        "footer.contact": "Kontakt",
+        "footer.resources": "Ressourcen",
+        "footer.blog": "Blog",
+        "footer.documentation": "Dokumentation",
+        "footer.support": "Support",
+        "footer.legal": "Rechtliches",
+        "footer.privacy": "Datenschutz",
+        "footer.terms": "AGB",
+        "footer.cookies": "Cookies",
+        "hero.cta_primary": "Loslegen",
+        "footer.copyright": "© 2025 VSHDocker. Alle Rechte vorbehalten."
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        el.innerText = translations[lang][key] || translations['en'][key] || el.innerText;
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const userLang = navigator.language.slice(0, 2);
+      const select = document.getElementById("languageSelect");
+      select.value = translations[userLang] ? userLang : 'en';
+      changeLanguage(select.value);
+    });
+</script>
+</body>
+</html>

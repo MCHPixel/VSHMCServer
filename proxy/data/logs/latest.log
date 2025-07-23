@@ -1,145 +1,336 @@
-[18:11:16] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 3.4.0-SNAPSHOT (git-81deb1ff-b521)...
-[18:11:16] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
-[18:11:16] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
-[18:11:16] [main/WARN] [com.velocitypowered.proxy.config.VelocityConfiguration]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[18:11:16] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
-[18:11:16] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 1 plugins
-[18:11:17] [Netty epoll Boss #0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /[0:0:0:0:0:0:0:0]:25565
-[18:11:17] [main/INFO] [com.velocitypowered.proxy.Velocity]: Done (1.33s)!
-[18:11:17] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /172.20.0.1:39406 is pinging the server with version 1.21
-[18:11:18] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /172.20.0.1:39412 is pinging the server with version 1.21
-[18:11:18] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /172.20.0.1:39426 is pinging the server with version 1.21
-[18:11:19] [Netty epoll Worker #3/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51370 is pinging the server with version Unknown
-[18:11:19] [Netty epoll Worker #4/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/172.20.0.1:39438) has connected
-[18:11:19] [Netty epoll Worker #4/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/172.20.0.1:39438): unable to connect to server hub
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.20.0.3:25001
+[18:00:50] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 3.4.0-SNAPSHOT (git-e9940713-b522)...
+[18:00:50] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
+[18:00:51] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 3.x.x (Linux x86_64) ciphers
+[18:00:51] [main/WARN] [com.velocitypowered.proxy.config.VelocityConfiguration]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
+[18:00:51] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
+[18:00:51] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 1 plugins
+[18:00:52] [Netty epoll Boss #0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /[0:0:0:0:0:0:0:0]:25565
+[18:00:52] [main/INFO] [com.velocitypowered.proxy.Velocity]: Done (2s)!
+[18:00:54] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:59008 is pinging the server with version Unknown
+[18:00:59] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:24733 is pinging the server with version 1.21
+[18:01:00] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:30721) has connected
+[18:01:01] [Netty epoll Worker #2/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:30721): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
-	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
 	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
-[18:11:19] [Netty epoll Worker #4/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/172.20.0.1:39438): unable to connect to server smp
-io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.20.0.4:25002
+[18:01:01] [Netty epoll Worker #2/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:30721): unable to connect to server smp
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.18.0.3:25002
 Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
-	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-521.jar:3.4.0-SNAPSHOT (git-81deb1ff-b521)]
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
 	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
-[18:11:19] [Netty epoll Worker #4/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/172.20.0.1:39438) has disconnected: Unable to connect you to smp. Please try again later.
-[18:11:47] [Netty epoll Worker #5/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:46620 is pinging the server with version Unknown
-[18:12:15] [Netty epoll Worker #6/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:54986 is pinging the server with version Unknown
-[18:12:43] [Netty epoll Worker #7/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:43004 is pinging the server with version Unknown
-[18:13:11] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36890 is pinging the server with version Unknown
-[18:13:39] [Netty epoll Worker #9/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:58180 is pinging the server with version Unknown
-[18:14:07] [Netty epoll Worker #10/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51408 is pinging the server with version Unknown
-[18:14:35] [Netty epoll Worker #11/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37746 is pinging the server with version Unknown
-[18:15:03] [Netty epoll Worker #12/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:40030 is pinging the server with version Unknown
-[18:15:32] [Netty epoll Worker #13/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36534 is pinging the server with version Unknown
-[18:15:59] [Netty epoll Worker #14/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:38648 is pinging the server with version Unknown
-[18:16:27] [Netty epoll Worker #15/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:56376 is pinging the server with version Unknown
-[18:16:35] [Netty epoll Worker #16/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /172.20.0.1:36700 is pinging the server with version 1.21
-[18:16:35] [Netty epoll Worker #17/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/172.20.0.1:36712) has connected
-[18:16:35] [Netty epoll Worker #17/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> hub has connected
-[18:16:56] [Netty epoll Worker #18/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55294 is pinging the server with version Unknown
-[18:17:24] [Netty epoll Worker #19/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:58696 is pinging the server with version Unknown
-[18:17:52] [Netty epoll Worker #20/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:53622 is pinging the server with version Unknown
-[18:18:21] [Netty epoll Worker #21/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42438 is pinging the server with version Unknown
-[18:18:49] [Netty epoll Worker #22/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:48666 is pinging the server with version Unknown
-[18:19:17] [Netty epoll Worker #23/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55056 is pinging the server with version Unknown
-[18:19:46] [Netty epoll Worker #24/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:60270 is pinging the server with version Unknown
-[18:20:14] [Netty epoll Worker #25/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:44080 is pinging the server with version Unknown
-[18:20:42] [Netty epoll Worker #26/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45564 is pinging the server with version Unknown
-[18:21:10] [Netty epoll Worker #27/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36686 is pinging the server with version Unknown
-[18:21:38] [Netty epoll Worker #28/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55550 is pinging the server with version Unknown
-[18:22:06] [Netty epoll Worker #29/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:44160 is pinging the server with version Unknown
-[18:22:34] [Netty epoll Worker #30/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42918 is pinging the server with version Unknown
-[18:23:02] [Netty epoll Worker #31/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42908 is pinging the server with version Unknown
-[18:23:30] [Netty epoll Worker #32/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51638 is pinging the server with version Unknown
-[18:23:58] [Netty epoll Worker #33/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:59982 is pinging the server with version Unknown
-[18:24:27] [Netty epoll Worker #34/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37460 is pinging the server with version Unknown
-[18:24:55] [Netty epoll Worker #35/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:43044 is pinging the server with version Unknown
-[18:25:22] [Netty epoll Worker #36/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:47914 is pinging the server with version Unknown
-[18:25:51] [Netty epoll Worker #37/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55216 is pinging the server with version Unknown
-[18:26:19] [Netty epoll Worker #38/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51748 is pinging the server with version Unknown
-[18:26:48] [Netty epoll Worker #39/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:34884 is pinging the server with version Unknown
-[18:27:15] [Netty epoll Worker #40/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42074 is pinging the server with version Unknown
-[18:27:43] [Netty epoll Worker #41/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:49202 is pinging the server with version Unknown
-[18:28:11] [Netty epoll Worker #42/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:46082 is pinging the server with version Unknown
-[18:28:39] [Netty epoll Worker #43/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:59550 is pinging the server with version Unknown
-[18:29:07] [Netty epoll Worker #44/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:38706 is pinging the server with version Unknown
-[18:29:36] [Netty epoll Worker #45/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37978 is pinging the server with version Unknown
-[18:30:04] [Netty epoll Worker #46/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:54992 is pinging the server with version Unknown
-[18:30:32] [Netty epoll Worker #47/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:37120 is pinging the server with version Unknown
-[18:31:00] [Netty epoll Worker #48/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42622 is pinging the server with version Unknown
-[18:31:28] [Netty epoll Worker #49/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:52206 is pinging the server with version Unknown
-[18:31:56] [Netty epoll Worker #50/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:59518 is pinging the server with version Unknown
-[18:32:24] [Netty epoll Worker #51/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:49410 is pinging the server with version Unknown
-[18:32:52] [Netty epoll Worker #52/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51874 is pinging the server with version Unknown
-[18:33:19] [Netty epoll Worker #53/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55792 is pinging the server with version Unknown
-[18:33:48] [Netty epoll Worker #54/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:53894 is pinging the server with version Unknown
-[18:34:16] [Netty epoll Worker #55/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51776 is pinging the server with version Unknown
-[18:34:43] [Netty epoll Worker #56/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45512 is pinging the server with version Unknown
-[18:35:11] [Netty epoll Worker #57/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:40568 is pinging the server with version Unknown
-[18:35:39] [Netty epoll Worker #58/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:60528 is pinging the server with version Unknown
-[18:36:07] [Netty epoll Worker #59/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:33106 is pinging the server with version Unknown
-[18:36:35] [Netty epoll Worker #60/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36582 is pinging the server with version Unknown
-[18:37:03] [Netty epoll Worker #61/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:50480 is pinging the server with version Unknown
-[18:37:31] [Netty epoll Worker #62/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:46748 is pinging the server with version Unknown
-[18:37:59] [Netty epoll Worker #63/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:36460 is pinging the server with version Unknown
-[18:38:26] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:35028 is pinging the server with version Unknown
-[18:38:54] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:44128 is pinging the server with version Unknown
-[18:39:22] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:52380 is pinging the server with version Unknown
-[18:39:50] [Netty epoll Worker #3/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51090 is pinging the server with version Unknown
-[18:40:18] [Netty epoll Worker #4/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:54282 is pinging the server with version Unknown
-[18:40:46] [Netty epoll Worker #5/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45654 is pinging the server with version Unknown
-[18:41:14] [Netty epoll Worker #6/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:41328 is pinging the server with version Unknown
-[18:41:42] [Netty epoll Worker #7/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:54990 is pinging the server with version Unknown
-[18:42:10] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:50700 is pinging the server with version Unknown
-[18:42:38] [Netty epoll Worker #9/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:56124 is pinging the server with version Unknown
-[18:43:06] [Netty epoll Worker #10/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:47738 is pinging the server with version Unknown
-[18:43:34] [Netty epoll Worker #11/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:40122 is pinging the server with version Unknown
-[18:44:03] [Netty epoll Worker #12/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51924 is pinging the server with version Unknown
-[18:44:31] [Netty epoll Worker #13/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:33168 is pinging the server with version Unknown
-[18:44:59] [Netty epoll Worker #14/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:56550 is pinging the server with version Unknown
-[18:45:27] [Netty epoll Worker #15/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:35014 is pinging the server with version Unknown
-[18:45:55] [Netty epoll Worker #16/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:34782 is pinging the server with version Unknown
-[18:46:24] [Netty epoll Worker #17/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:33050 is pinging the server with version Unknown
-[18:46:51] [Netty epoll Worker #18/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:53848 is pinging the server with version Unknown
-[18:47:19] [Netty epoll Worker #19/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:54360 is pinging the server with version Unknown
-[18:47:47] [Netty epoll Worker #20/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:42194 is pinging the server with version Unknown
-[18:48:15] [Netty epoll Worker #21/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:57368 is pinging the server with version Unknown
-[18:48:43] [Netty epoll Worker #22/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55694 is pinging the server with version Unknown
-[18:49:11] [Netty epoll Worker #23/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:60720 is pinging the server with version Unknown
-[18:49:39] [Netty epoll Worker #24/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:44548 is pinging the server with version Unknown
-[18:50:06] [Netty epoll Worker #25/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:46886 is pinging the server with version Unknown
-[18:50:35] [Netty epoll Worker #26/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:38320 is pinging the server with version Unknown
-[18:51:02] [Netty epoll Worker #27/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:52940 is pinging the server with version Unknown
-[18:51:10] [Netty epoll Worker #17/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] ImHackerGod (/172.20.0.1:36712) has disconnected
-[18:51:10] [Netty epoll Worker #17/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> hub has disconnected
-[18:51:10] [Netty epoll Worker #28/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /172.20.0.1:38538 is pinging the server with version 1.21
-[18:51:22] [Shutdown thread/INFO] [com.velocitypowered.proxy.VelocityServer]: Shutting down the proxy...
-[18:51:22] [Shutdown thread/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Closing endpoint /0.0.0.0:25565
+[18:01:01] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:30721) has disconnected: Kein Verbindungsaufbau zu smp möglich. Bitte versuche es später erneut.
+[18:01:31] [Netty epoll Worker #3/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:51368 is pinging the server with version Unknown
+[18:02:12] [Netty epoll Worker #4/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45190 is pinging the server with version Unknown
+[18:02:48] [Netty epoll Worker #5/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:43658 is pinging the server with version Unknown
+[18:03:21] [Netty epoll Worker #6/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:39966 is pinging the server with version Unknown
+[18:03:31] [Netty epoll Worker #7/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:57550 is pinging the server with version 1.21
+[18:03:32] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:37634) has connected
+[18:03:32] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:03:32] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> smp has connected
+[18:03:56] [Netty epoll Worker #9/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45886 is pinging the server with version Unknown
+[18:04:06] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:30] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:34] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> smp: exception encountered in com.velocitypowered.proxy.connection.backend.BackendPlaySessionHandler@7849bdec
+io.netty.channel.unix.Errors$NativeIoException: recvAddress(..) failed: Connection reset by peer
+[18:04:34] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> smp has disconnected
+[18:04:34] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:34] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634): unable to connect to server smp
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.18.0.3:25002
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:34] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:37634) has disconnected: Kein Verbindungsaufbau zu smp möglich. Bitte versuche es später erneut.
+[18:04:34] [Netty epoll Worker #10/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:53170 is pinging the server with version Unknown
+[18:04:39] [Netty epoll Worker #11/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:38593 is pinging the server with version 1.21
+[18:04:40] [Netty epoll Worker #12/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:47273) has connected
+[18:04:40] [Netty epoll Worker #12/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:47273): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:40] [Netty epoll Worker #12/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:47273): unable to connect to server smp
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.18.0.3:25002
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:40] [Netty epoll Worker #12/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:47273) has disconnected: Kein Verbindungsaufbau zu smp möglich. Bitte versuche es später erneut.
+[18:04:43] [Netty epoll Worker #13/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:16308 is pinging the server with version 1.21
+[18:04:44] [Netty epoll Worker #14/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:55713) has connected
+[18:04:44] [Netty epoll Worker #14/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:55713): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:44] [Netty epoll Worker #14/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:55713): unable to connect to server smp
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.18.0.3:25002
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:44] [Netty epoll Worker #14/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:55713) has disconnected: Kein Verbindungsaufbau zu smp möglich. Bitte versuche es später erneut.
+[18:04:51] [Netty epoll Worker #15/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:27364 is pinging the server with version 1.21
+[18:04:52] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:29124) has connected
+[18:04:52] [Netty epoll Worker #0/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:29124): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:52] [Netty epoll Worker #0/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:29124): unable to connect to server smp
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: smp/172.18.0.3:25002
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:04:52] [Netty epoll Worker #0/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:29124) has disconnected: Kein Verbindungsaufbau zu smp möglich. Bitte versuche es später erneut.
+[18:05:13] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:39186 is pinging the server with version Unknown
+[18:05:48] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55120 is pinging the server with version Unknown
+[18:06:31] [Netty epoll Worker #3/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:44018 is pinging the server with version Unknown
+[18:07:13] [Netty epoll Worker #4/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:60750 is pinging the server with version Unknown
+[18:07:50] [Netty epoll Worker #5/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:52226 is pinging the server with version Unknown
+[18:08:15] [Netty epoll Worker #7/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:51349 is pinging the server with version 1.21
+[18:08:16] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] ImHackerGod (/192.168.65.1:20959) has connected
+[18:08:17] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:20959): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:08:17] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> smp has connected
+[18:08:32] [Netty epoll Worker #9/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:45440 is pinging the server with version Unknown
+[18:08:38] [Netty epoll Worker #8/ERROR] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] ImHackerGod (/192.168.65.1:20959): unable to connect to server hub
+io.netty.channel.AbstractChannel$AnnotatedConnectException: finishConnect(..) failed: Connection refused: hub/172.18.0.4:25001
+Caused by: java.net.ConnectException: finishConnect(..) failed: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Errors.handleConnectErrno(Errors.java:131) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.unix.Socket.finishConnect(Socket.java:360) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.doFinishConnect(AbstractEpollChannel.java:761) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.finishConnect(AbstractEpollChannel.java:738) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.epollOutReady(AbstractEpollChannel.java:608) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.handle(AbstractEpollChannel.java:469) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler$DefaultEpollIoRegistration.handle(EpollIoHandler.java:307) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.processReady(EpollIoHandler.java:489) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.epoll.EpollIoHandler.run(EpollIoHandler.java:444) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:204) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:175) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1073) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[velocity-3.4.0-SNAPSHOT-522.jar:3.4.0-SNAPSHOT (git-e9940713-b522)]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+[18:08:50] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] ImHackerGod (/192.168.65.1:20959) has disconnected
+[18:08:50] [Netty epoll Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] ImHackerGod -> smp has disconnected
+[18:08:51] [Netty epoll Worker #10/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /192.168.65.1:63412 is pinging the server with version 1.21
+[18:09:05] [Netty epoll Worker #11/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:43678 is pinging the server with version Unknown
+[18:09:41] [Netty epoll Worker #12/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:33612 is pinging the server with version Unknown
+[18:10:19] [Netty epoll Worker #13/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:38308 is pinging the server with version Unknown
+[18:10:51] [Netty epoll Worker #14/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:55056 is pinging the server with version Unknown
+[18:11:22] [Netty epoll Worker #15/INFO] [com.velocitypowered.proxy.connection.client.StatusSessionHandler]: [initial connection] /[0:0:0:0:0:0:0:1]:53942 is pinging the server with version Unknown

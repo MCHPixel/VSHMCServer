@@ -1,0 +1,79 @@
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(55, 65, 81, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hover-glow-card:hover {
+    box-shadow: 0 0 60px rgba(102, 126, 234, 0.5);
+    transform: translateY(-20px);
+}
+.hover-glow-button:hover {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.5);
+    transform: translateY(-5px);
+}
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+/* Background Classes */
+.bg-a-1             { background-color: #F2545B; }
+.bg-a-2             { background-color: #A93F55; }
+.bg-a-3             { background-color: #19323C; }
+.bg-a-4             { background-color: #F3F7F0; }
+.bg-a-5             { background-color: #8C5E58; }
+
+
+/* Tailwind Gray Scale - Named Custom Classes */
+
+.bg-grayGhost        { background-color: #f9fafb; }  /* gray-50 */
+.bg-cloudFeather     { background-color: #f3f4f6; }  /* gray-100 */
+.bg-silverDust       { background-color: #e5e7eb; }  /* gray-200 */
+.bg-ashMist          { background-color: #d1d5db; }  /* gray-300 */
+.bg-stoneWhisper     { background-color: #9ca3af; }  /* gray-400 */
+.bg-grayMatter       { background-color: #6b7280; }  /* gray-500 */
+.bg-charcoalPulse    { background-color: #4b5563; }  /* gray-600 */
+.bg-shadowArmor      { background-color: #374151; }  /* gray-700 */
+.bg-deepNautilus     { background-color: #1f2937; }  /* gray-800 */
+.bg-midnightCoal     { background-color: #111827; }  /* gray-900 */
+
+/* Background Classes - Named Creatively */
+.bg-midnightCoal       { background-color: #111827; }  /* richBlack */
+.bg-deepNautilus       { background-color: #1F2937; }  /* gray800 */
+.bg-indigoAuthority    { background-color: #213663; }  /* delftBlue */
+.bg-winterFog          { background-color: #94a3b8; }  /* slate400 */
+.bg-smokySteel         { background-color: #475569; }  /* slate600 */
+.bg-mintyGlow          { background-color: #e4fde1; }  /* nyanza */
+.bg-softPistachio      { background-color: #8acb88; }  /* pistachio */
+.bg-tealMist           { background-color: #648381; }  /* hookersGreen */
+
+
+
+/* Text Color Classes - Black to Black-Blue Range */
+.text-obsidianBlack    { color: #0b0c10; }  /* almost pure black */
+.text-richBlack        { color: #111827; }  /* same as bg-midnightCoal */
+.text-ironNight        { color: #1c1f2a; }  /* blue-tinted black */
+.text-delftBlue        { color: #213663; }  /* matches bg-indigoAuthority */
+.text-darkIndigo       { color: #2c3e50; }  /* elegant dark blue-black */
+.text-eclipseBlue      { color: #1e293b; }  /* cold slate navy */
+
+/* Text Color Classes - Cyan / Blue Accent Range */
+.text-coolCyan         { color: #6ee7b7; }  /* soft minty cyan */
+.text-polarIce         { color: #7dd3fc; }  /* light ice blue */
+.text-steelTeal        { color: #5f9ea0; }  /* muted blue-teal */
+.text-tealMist         { color: #648381; }  /* matches bg-tealMist */
+.text-cyberAqua        { color: #2dd4bf; }  /* modern punchy cyan */
+.text-deepCyanSmoke    { color: #164e63; }  /* cold, deep cyan */
+
+/* Gradients! */
+.gradient-1 {
+   background-image: linear-gradient(to left bottom, #390000, #57001f, #730042, #850071, #8222ab, #6c41c1, #4c57d3, #0069e0, #006bc0, #006293, #005565, #034642);
+}
